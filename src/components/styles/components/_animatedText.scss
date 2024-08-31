@@ -1,0 +1,33 @@
+.animated-text {
+  color: $primary-black;
+  font-size: 2rem;
+  text-align: start;
+  font-weight: 300;
+
+  span {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
+
+.animated-text {
+  .cursor {
+    color: $primary-black;
+    animation: blink-animation 1s infinite;
+    font-size: inherit;
+  }
+  .cursor-fast-blink {
+    color: $primary-black;
+    animation: blink-animation 1s infinite;
+    font-size: inherit;
+  }
+}
+
+@keyframes blink-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
+  }
+}

@@ -1,0 +1,16 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #ede4d3;
+}
+
+#root {
+  min-height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+}
