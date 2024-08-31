@@ -4,7 +4,7 @@ const ContactSection: FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
+  //submit
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     window.location.href = `mailto:juliooocmc18@gmail.com?subject=Contacto desde Portafolio&body=Nombre: ${name}%0AEmail: ${email}%0AMensaje: ${message}`;
