@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
 
-const SocialSection: FC = () => (
+const SocialLinksSection: FC = () => (
   <div
     className="max-w-4xl mx-auto mt-10 p-7 rounded-lg shadow-lg text-center"
     style={{ border: '2px solid #c4bcab' }}
@@ -11,7 +11,7 @@ const SocialSection: FC = () => (
         href="https://www.linkedin.com/in/julio-mijares/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-700 hover:text-orange-500"
+        className="text-gray-700 hover:text-orange-500 transition-colors duration-300 ease-in-out"
       >
         <FaLinkedin size={40} />
       </a>
@@ -19,19 +19,19 @@ const SocialSection: FC = () => (
         href="https://github.com/julioocmc"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-700 hover:text-orange-500"
+        className="text-gray-700 hover:text-orange-500 transition-colors duration-300 ease-in-out"
       >
         <FaGithub size={40} />
       </a>
       <a
         href="mailto:juliooocmc18@gmail.com"
-        className="text-gray-700 hover:text-orange-500"
+        className="text-gray-700 hover:text-orange-500 transition-colors duration-300 ease-in-out"
       >
         <FaEnvelope size={40} />
       </a>
       <a
         href="tel:+584241484800"
-        className="text-gray-700 hover:text-orange-500"
+        className="text-gray-700 hover:text-orange-500 transition-colors duration-300 ease-in-out"
       >
         <FaPhone size={40} />
       </a>
@@ -39,4 +39,4 @@ const SocialSection: FC = () => (
   </div>
 );
 
-export default SocialSection;
+export default SocialLinksSection;
