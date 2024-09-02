@@ -4,6 +4,7 @@ import Content from './components/Content';
 import ExperienceSection from './components/ExperienceSection';
 import SectionTitle from './components/SectionTitle';
 import SkillsSection from './components/SkillsSection';
+import SocialSection from './components/SocialSection';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         </section>
         <section className="card mt-10">
           <SectionTitle title="Contáctame" /> <AboutSection />
+        </section>
+        <section className="card mt-10 mb-10">
+          <SectionTitle title="Puedes encontrarme:" /> <SocialSection />
         </section>
       </main>
     </div>

@@ -13,7 +13,7 @@ const ContactSection: FC = () => {
   return (
     <div
       className="mx-auto m-10  p-7 rounded-lg shadow-lg"
-      style={{ width: '400px' }}
+      style={{ width: '400px', border: '2px solid #c4bcab' }}
     >
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
