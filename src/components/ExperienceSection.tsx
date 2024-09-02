@@ -13,7 +13,7 @@ const experiences: ExperienceProps[] = [
   {
     title: 'Desarrollador Frontend',
     company: 'Makro Redvital',
-    video: '/public/redvital-videoc.mp4',
+    video: '/redvital-videoc.mp4',
     date: '11/2023 - Presente',
     description: `
       Mi primer gran proyecto en una de las principales empresas de Venezuela. 
@@ -28,7 +28,7 @@ const experiences: ExperienceProps[] = [
   {
     title: 'Desarrollador Full Stack',
     company: 'Grupo Aplired',
-    video: '/public/jmstore-video.mp4',
+    video: '/jmstore-video.mp4',
     date: '01/2023 - 02/2023',
     description: `
       En este proyecto, fui contratado por Grupo Aplired para desarrollar un modelo de ecommerce, donde asumí tanto el 
@@ -41,7 +41,7 @@ const experiences: ExperienceProps[] = [
   {
     title: 'Desarrollador Full Stack',
     company: 'Grupo Aplired',
-    video: '/public/vzlafood-video.mp4',
+    video: '/vzlafood-video.mp4',
     date: '02/2023 - 03/2023',
     description: `
       Para este proyecto con Grupo Aplired, fui encargado de desarrollar una página informativa dedicada a ofrecer detalles sobre 

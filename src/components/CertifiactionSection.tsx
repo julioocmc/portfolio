@@ -14,7 +14,7 @@ const certifications: Certification[] = [
     title: 'Programación Backend',
     institution: 'Coderhouse',
     description: 'Curso avanzado de desarrollo backend con Node.js y MongoDB.',
-    image: '/public/backend-certificado.png',
+    image: '/backend-certificado.png',
     dateRange: '08/2022 - 02/2023',
   },
   {
@@ -22,14 +22,14 @@ const certifications: Certification[] = [
     institution: 'Coderhouse',
     description:
       'Fundamentos y conceptos avanzados de JavaScript. Top 10 en desempeño.',
-    image: '/public/javascript-certificado.png',
+    image: '/javascript-certificado.png',
     dateRange: '01/2023 - 03/2023',
   },
   {
     title: 'React',
     institution: 'Coderhouse',
     description: 'Desarrollo de aplicaciones SPA escalables con React.',
-    image: '/public/react-certificado.png',
+    image: '/react-certificado.png',
     dateRange: '02/2023 - 04/2023',
   },
 ];
