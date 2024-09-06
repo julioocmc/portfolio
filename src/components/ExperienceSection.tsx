@@ -8,11 +8,12 @@ interface ExperienceProps {
   video?: string;
   date: string;
   description: string;
+  link?: string;
 }
 
 const experiences: ExperienceProps[] = [
   {
-    projectName: 'Sistema de Autogestión Comercial S.A.C.',
+    projectName: 'Redvital Platform',
     title: 'Desarrollador Frontend',
     company: 'Makro Redvital',
     video: '/public/redvital-videoc.mp4',
@@ -40,6 +41,7 @@ const experiences: ExperienceProps[] = [
       a los usuarios navegar por los productos, añadirlos al carrito y completar la compra de manera intuitiva. Esta fue una versión 
       base, la cual entregué al cliente para que pudieran continuar con su desarrollo posterior.
     `,
+    link: 'https://sparkly-peony-0e7e86.netlify.app/',
   },
   {
     projectName: 'Gastronomía Venezolana',
@@ -53,6 +55,7 @@ const experiences: ExperienceProps[] = [
       los usuarios explorar diferentes opciones de menús. Utilicé HTML, JavaScript y CSS para construir esta plataforma, enfocándome 
       en una interfaz sencilla pero efectiva que resaltara la información de manera clara y accesible para todos los visitantes.
     `,
+    link: 'https://unrivaled-mandazi-3196aa.netlify.app/',
   },
 ];
 
@@ -63,6 +66,7 @@ const ExperienceCard: FC<ExperienceProps> = ({
   video,
   date,
   description,
+  link,
 }) => {
   const showModal = () => {
     Swal.fire({
@@ -102,12 +106,21 @@ const ExperienceCard: FC<ExperienceProps> = ({
         />
       )}
       <div className="px-6 py-4">
-        <div className="text-xl mb-2">
-          {projectName} -{' '}
-          <span style={{ color: '#dd6236', fontWeight: '800' }}>{title}</span>
+        <div className="font-bold text-xl mb-2">
+          {projectName} - <span style={{ color: '#dd6236' }}>{title}</span>
         </div>
         <p className="text-gray-700 text-left">{company}</p>
         <p className="text-gray-600 text-left">{date}</p>
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-4 text-orange-600 hover:text-orange-800 font-bold transition-colors duration-300"
+          >
+            Visita la página
+          </a>
+        )}
       </div>
     </div>
   );
