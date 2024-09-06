@@ -5,7 +5,8 @@ import './styles/main.scss';
 
 const Content = () => {
   return (
-    <div className="content-container p-10">
+    <div className="content-container max-w-screen-lg w-full mx-auto p-10">
+      {' '}
       <header className="flex flex-col md:flex-row p-5">
         <div className="w-full md:w-1/2 mb-5 md:mb-0">
           <AnimatedText />

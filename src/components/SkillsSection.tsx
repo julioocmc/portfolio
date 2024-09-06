@@ -55,10 +55,10 @@ const skills: Skill[] = [
 
 const SkillsSection: FC = () => (
   <div
-    className="max-w-4xl mx-auto p-7 rounded-lg shadow-lg"
+    className="max-w-lg mx-auto p-7 rounded-lg shadow-lg"
     style={{ border: '2px solid #c4bcab' }}
   >
-    <div className="flex flex-wrap justify-center space-x-8">
+    <div className="grid grid-cols-5 gap-10 justify-center">
       {skills.map((skill, index) => (
         <a
           key={index}

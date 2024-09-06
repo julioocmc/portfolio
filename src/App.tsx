@@ -10,25 +10,30 @@ function App() {
   return (
     <div className="App">
       <header className="flex flex-col items-center justify-center">
-        <div className="card">
+        <div className="card max-w-screen-lg w-full px-4">
           <Content />
         </div>
       </header>
       <main className="flex flex-col items-center justify-center">
-        <section className="card">
-          <SectionTitle title="Experiencia Laboral" /> <ExperienceSection />
+        <section className="card max-w-screen-lg  px-4">
+          <SectionTitle title="Experiencia Laboral" />
+          <ExperienceSection />
         </section>
-        <section className="card">
-          <SectionTitle title="Habilidades" /> <SkillsSection />
+        <section className="card max-w-screen-lg  px-4">
+          <SectionTitle title="Habilidades" />
+          <SkillsSection />
         </section>
-        <section className="card mt-10">
-          <SectionTitle title="Certificados" /> <CertificationsSection />
+        <section className="card max-w-screen-lg  px-4 mt-10">
+          <SectionTitle title="Certificados" />
+          <CertificationsSection />
         </section>
-        <section className="card mt-10">
-          <SectionTitle title="Contáctame" /> <AboutSection />
+        <section className="card max-w-screen-lg  px-4 mt-10">
+          <SectionTitle title="Contáctame" />
+          <AboutSection />
         </section>
-        <section className="card mt-10 mb-10">
-          <SectionTitle title="Puedes encontrarme:" /> <SocialSection />
+        <section className="card max-w-screen-lg  px-4 mt-10 mb-10">
+          <SectionTitle title="Puedes encontrarme:" />
+          <SocialSection />
         </section>
       </main>
     </div>

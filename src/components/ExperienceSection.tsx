@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Swal from 'sweetalert2';
 
 interface ExperienceProps {
+  projectName: string;
   title: string;
   company: string;
   video?: string;
@@ -11,9 +12,10 @@ interface ExperienceProps {
 
 const experiences: ExperienceProps[] = [
   {
+    projectName: 'Sistema de Autogestión Comercial S.A.C.',
     title: 'Desarrollador Frontend',
     company: 'Makro Redvital',
-    video: '/redvital-videoc.mp4',
+    video: '/public/redvital-videoc.mp4',
     date: '11/2023 - Presente',
     description: `
       Mi primer gran proyecto en una de las principales empresas de Venezuela. 
@@ -26,9 +28,10 @@ const experiences: ExperienceProps[] = [
     `,
   },
   {
+    projectName: 'JM Store',
     title: 'Desarrollador Full Stack',
     company: 'Grupo Aplired',
-    video: '/jmstore-video.mp4',
+    video: '/public/jmstore-video.mp4',
     date: '01/2023 - 02/2023',
     description: `
       En este proyecto, fui contratado por Grupo Aplired para desarrollar un modelo de ecommerce, donde asumí tanto el 
@@ -39,9 +42,10 @@ const experiences: ExperienceProps[] = [
     `,
   },
   {
+    projectName: 'Gastronomía Venezolana',
     title: 'Desarrollador Full Stack',
     company: 'Grupo Aplired',
-    video: '/vzlafood-video.mp4',
+    video: '/public/vzlafood-video.mp4',
     date: '02/2023 - 03/2023',
     description: `
       Para este proyecto con Grupo Aplired, fui encargado de desarrollar una página informativa dedicada a ofrecer detalles sobre 
@@ -53,6 +57,7 @@ const experiences: ExperienceProps[] = [
 ];
 
 const ExperienceCard: FC<ExperienceProps> = ({
+  projectName,
   title,
   company,
   video,
@@ -61,8 +66,8 @@ const ExperienceCard: FC<ExperienceProps> = ({
 }) => {
   const showModal = () => {
     Swal.fire({
-      title: title,
-      html: `<hr style="margin: 10px 0; border: 1px solid #dd6236"><div style="text-align: left;">${description}</div>`,
+      title: projectName,
+      html: `<div style="text-align: left;">${description}</div>`,
       background: '#f0e8d9',
       color: '#333',
       showCloseButton: true,
@@ -87,6 +92,7 @@ const ExperienceCard: FC<ExperienceProps> = ({
           autoPlay
           loop
           muted
+          playsInline
         />
       ) : (
         <img
@@ -96,8 +102,9 @@ const ExperienceCard: FC<ExperienceProps> = ({
         />
       )}
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2" style={{ color: '#dd6236' }}>
-          {title}
+        <div className="text-xl mb-2">
+          {projectName} -{' '}
+          <span style={{ color: '#dd6236', fontWeight: '800' }}>{title}</span>
         </div>
         <p className="text-gray-700 text-left">{company}</p>
         <p className="text-gray-600 text-left">{date}</p>
