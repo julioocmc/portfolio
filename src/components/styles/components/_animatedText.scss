@@ -1,5 +1,5 @@
 .animated-text {
-  color: $primary-black;
+  color: var(--primary-black);
   font-size: 2rem;
   text-align: start;
   font-weight: 300;
@@ -12,12 +12,12 @@
 
 .animated-text {
   .cursor {
-    color: $primary-black;
+    color: var(--primary-black);
     animation: blink-animation 1s infinite;
     font-size: inherit;
   }
   .cursor-fast-blink {
-    color: $primary-black;
+    color: var(--primary-black);
     animation: blink-animation 1s infinite;
     font-size: inherit;
   }
