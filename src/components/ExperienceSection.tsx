@@ -1,185 +1,119 @@
-import { FC } from 'react';
-import Swal from 'sweetalert2';
+import { FC, useState } from 'react';
+import CustomModal from './CustomModal';
+import { ExperienceProps, experiences } from '../utils/experiences';
 
-interface ExperienceProps {
-  projectName: string;
-  title: string;
-  company: string;
-  video?: string;
-  date: string;
-  description: string;
-  link?: string;
-}
-
-const experiences: ExperienceProps[] = [
-  {
-    projectName: 'Panel Administrativo',
-    title: 'Desarrollador Frontend',
-    company: 'Go-Ya Venezuela',
-    video: '/goya-video.mp4',
-    date: '03/2025 - 05/2025',
-    description: `
-      Mi primer gran proyecto en una de las principales empresas de Venezuela. 
-      Como desarrollador frontend, fui el único responsable del desarrollo inicial de toda la plataforma web interna, 
-      destinada exclusivamente a los empleados de la empresa, incluyendo gerentes, proveedores, liquidadores y administradores. 
-      Esta plataforma les permite monitorear y gestionar el rendimiento de sus productos dentro de la empresa. 
-      El proyecto, desarrollado con tecnologías como Metronic, React, TypeScript, SASS, SweetAlert y Bootstrap, es altamente 
-      modular y complejo, adaptado a las necesidades específicas de cada usuario. 
-      Debido a un acuerdo de confidencialidad, no puedo compartir el enlace ni hacer público su acceso.
-    `,
-  },
-  {
-    projectName: 'Panel para Proveedores',
-    title: 'Desarrollador Frontend',
-    company: 'Makro Redvital',
-    video: '/redvital-videoc.mp4',
-    date: '11/2023 - Presente',
-    description: `
-      Mi primer gran proyecto en una de las principales empresas de Venezuela. 
-      Como desarrollador frontend, fui el único responsable del desarrollo inicial de toda la plataforma web interna, 
-      destinada exclusivamente a los empleados de la empresa, incluyendo gerentes, proveedores, liquidadores y administradores. 
-      Esta plataforma les permite monitorear y gestionar el rendimiento de sus productos dentro de la empresa. 
-      El proyecto, desarrollado con tecnologías como Metronic, React, TypeScript, SASS, SweetAlert y Bootstrap, es altamente 
-      modular y complejo, adaptado a las necesidades específicas de cada usuario. 
-      Debido a un acuerdo de confidencialidad, no puedo compartir el enlace ni hacer público su acceso.
-    `,
-  },
-  {
-    projectName: 'Gestor de Pedidos',
-    title: 'Desarrollador Frontend',
-    company: 'Makro Redvital',
-    video: '/pedidos-video.mp4',
-    date: '11/2023 - Presente',
-    description: `
-      Mi primer gran proyecto en una de las principales empresas de Venezuela. 
-      Como desarrollador frontend, fui el único responsable del desarrollo inicial de toda la plataforma web interna, 
-      destinada exclusivamente a los empleados de la empresa, incluyendo gerentes, proveedores, liquidadores y administradores. 
-      Esta plataforma les permite monitorear y gestionar el rendimiento de sus productos dentro de la empresa. 
-      El proyecto, desarrollado con tecnologías como Metronic, React, TypeScript, SASS, SweetAlert y Bootstrap, es altamente 
-      modular y complejo, adaptado a las necesidades específicas de cada usuario. 
-      Debido a un acuerdo de confidencialidad, no puedo compartir el enlace ni hacer público su acceso.
-    `,
-  },
-  {
-    projectName: 'Tienda Virtual',
-    title: 'Desarrollador Frontend',
-    company: 'Makro Redvital',
-    video: '/tienda-video.mp4',
-    date: '11/2023 - Presente',
-    description: `
-      Mi primer gran proyecto en una de las principales empresas de Venezuela. 
-      Como desarrollador frontend, fui el único responsable del desarrollo inicial de toda la plataforma web interna, 
-      destinada exclusivamente a los empleados de la empresa, incluyendo gerentes, proveedores, liquidadores y administradores. 
-      Esta plataforma les permite monitorear y gestionar el rendimiento de sus productos dentro de la empresa. 
-      El proyecto, desarrollado con tecnologías como Metronic, React, TypeScript, SASS, SweetAlert y Bootstrap, es altamente 
-      modular y complejo, adaptado a las necesidades específicas de cada usuario. 
-      Debido a un acuerdo de confidencialidad, no puedo compartir el enlace ni hacer público su acceso.
-    `,
-  },
-  {
-    projectName: 'JM Store',
-    title: 'Desarrollador Full Stack',
-    company: 'Grupo Aplired',
-    video: '/jmstore-video.mp4',
-    date: '01/2023 - 02/2023',
-    description: `
-      En este proyecto, fui contratado por Grupo Aplired para desarrollar un modelo de ecommerce, donde asumí tanto el 
-      desarrollo del frontend como una pequeña integración con el backend utilizando Firebase para gestionar el historial de compras. 
-      El frontend fue desarrollado con Vite, React, JavaScript y CSS, creando una experiencia de usuario simple y directa que permite 
-      a los usuarios navegar por los productos, añadirlos al carrito y completar la compra de manera intuitiva. Esta fue una versión 
-      base, la cual entregué al cliente para que pudieran continuar con su desarrollo posterior.
-    `,
-    link: 'https://sparkly-peony-0e7e86.netlify.app/',
-  },
-  {
-    projectName: 'Gastronomía Venezolana',
-    title: 'Desarrollador Full Stack',
-    company: 'Grupo Aplired',
-    video: '/vzlafood-video.mp4',
-    date: '02/2023 - 03/2023',
-    description: `
-      Para este proyecto con Grupo Aplired, fui encargado de desarrollar una página informativa dedicada a ofrecer detalles sobre 
-      planes de comida típica venezolana. Mi objetivo fue crear una página visualmente atractiva y fácil de navegar, permitiendo a 
-      los usuarios explorar diferentes opciones de menús. Utilicé HTML, JavaScript y CSS para construir esta plataforma, enfocándome 
-      en una interfaz sencilla pero efectiva que resaltara la información de manera clara y accesible para todos los visitantes.
-    `,
-    link: 'https://unrivaled-mandazi-3196aa.netlify.app/',
-  },
-];
-
-const ExperienceCard: FC<ExperienceProps> = ({
+const ExperienceCard: FC<ExperienceProps & { onClick: () => void }> = ({
   projectName,
   title,
   company,
   video,
   date,
-  description,
   link,
-}) => {
-  const showModal = () => {
-    Swal.fire({
-      title: projectName,
-      html: `<div style="text-align: left;">${description}</div>`,
-      background: '#f0e8d9',
-      color: '#333',
-      showCloseButton: true,
-      confirmButtonColor: '#dd6236',
-      customClass: {
-        title: 'text-xl font-bold',
-        htmlContainer: 'text-base',
-      },
-    });
+  technologies,
+  onClick,
+}) => (
+  <div
+    className="max-w-sm p-5 rounded-lg shadow-lg mr-10 ml-10 mb-10 transform transition duration-500 hover:scale-105 cursor-pointer"
+    style={{ backgroundColor: 'var(--primary-card-background)' }}
+    onClick={onClick}
+    role="button"
+    tabIndex={0}
+    onKeyPress={(e) => {
+      if (e.key === 'Enter') onClick();
+    }}
+  >
+    {video ? (
+      <video
+        className="w-full rounded-lg h-50 object-cover"
+        src={video}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+    ) : (
+      <img
+        className="w-full rounded-lg h-50 object-cover"
+        src="https://via.placeholder.com/150"
+        alt={title}
+      />
+    )}
+    <div className="px-6 py-4">
+      <div
+        className="font-bold text-xl mb-2"
+        style={{ color: 'var(--primary-black)' }}
+      >
+        {projectName} -{' '}
+        <span style={{ color: 'var(--primary-bullet)' }}>{title}</span>
+      </div>
+      <p className="text-gray-700 text-left font-bold">{company}</p>
+      <p className="text-gray-600 text-left">{date}</p>
+      <div className="flex flex-wrap gap-2 mt-2">
+        {(technologies ?? []).map((tech, i) => (
+          <span
+            key={i}
+            className="px-2 py-1 rounded-full text-xs font-semibold"
+            style={{
+              background: 'var(--accent-200)',
+              color: 'var(--primary-black)',
+              border: '1px solid var(--accent-100)',
+            }}
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      {link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-4 hover:text-orange-800 font-bold transition-colors duration-300"
+          style={{ color: 'var(--primary-bullet)' }}
+        >
+          Visita la página
+        </a>
+      )}
+    </div>
+  </div>
+);
+
+const ExperienceSection: FC = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedExp, setSelectedExp] = useState<ExperienceProps | null>(null);
+
+  const openModal = (exp: ExperienceProps) => {
+    setSelectedExp(exp);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedExp(null);
   };
 
   return (
-    <div
-      className="max-w-sm p-5 rounded-lg shadow-lg mr-10 ml-10 mb-10 transform transition duration-500 hover:scale-105 cursor-pointer"
-      style={{ backgroundColor: '#c4bcab' }}
-      onClick={showModal}
-    >
-      {video ? (
-        <video
-          className="w-full rounded-lg h-50 object-cover"
-          src={video}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-      ) : (
-        <img
-          className="w-full rounded-lg h-50 object-cover"
-          src="https://via.placeholder.com/150"
-          alt={title}
-        />
+    <div className="flex flex-wrap justify-center">
+      {experiences.map((exp, index) => (
+        <ExperienceCard key={index} {...exp} onClick={() => openModal(exp)} />
+      ))}
+
+      {selectedExp && (
+        <CustomModal
+          isOpen={modalOpen}
+          onClose={closeModal}
+          title={selectedExp.projectName}
+        >
+          <div
+            className="text-gray-600 dark:text-gray-300"
+            style={{ whiteSpace: 'pre-line' }}
+            dangerouslySetInnerHTML={{ __html: selectedExp.description }}
+          />
+        </CustomModal>
       )}
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">
-          {projectName} - <span style={{ color: '#dd6236' }}>{title}</span>
-        </div>
-        <p className="text-gray-700 text-left">{company}</p>
-        <p className="text-gray-600 text-left">{date}</p>
-        {link && (
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-4 text-orange-600 hover:text-orange-800 font-bold transition-colors duration-300"
-          >
-            Visita la página
-          </a>
-        )}
-      </div>
     </div>
   );
 };
-
-const ExperienceSection: FC = () => (
-  <div className="flex flex-wrap justify-center">
-    {experiences.map((exp, index) => (
-      <ExperienceCard key={index} {...exp} />
-    ))}
-  </div>
-);
 
 export default ExperienceSection;
