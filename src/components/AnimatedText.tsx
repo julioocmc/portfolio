@@ -35,12 +35,17 @@ const AnimatedText = () => {
   }, [displayedText, isDeleting, index]);
 
   return (
-    <div className="animated-text">
+    <div className="animated-text" style={{ color: 'var(--secondary-black)' }}>
       <div>
         {displayedText}
         <span className={blinkFast ? 'cursor-fast-blink' : 'cursor'}>|</span>
         <br />
-        <span className="animated-text ">Julio Mijares</span>
+        <span
+          className="animated-text"
+          style={{ color: 'var(--secondary-black)' }}
+        >
+          Julio Mijares
+        </span>
       </div>
       <div>Frontend Developer</div>
     </div>
