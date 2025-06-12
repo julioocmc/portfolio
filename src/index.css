@@ -7,7 +7,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background-color: #ede4d3;
+  background-color: var(--primary-background);
 }
 
 #root {

@@ -24,7 +24,7 @@ function App() {
           <SkillsSection />
         </section>
         <section className="card max-w-screen-lg  px-4 mt-10">
-          <SectionTitle title="Certificados" />
+          <SectionTitle title="Educación" />
           <CertificationsSection />
         </section>
         <section className="card max-w-screen-lg  px-4 mt-10">
