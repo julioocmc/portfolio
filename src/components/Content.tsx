@@ -15,7 +15,10 @@ const Content = () => {
           <SectionTitle title="Resumen" />
           <div
             className="p-5 mt-4 md:mt-8 rounded-lg overflow-y-auto"
-            style={{ backgroundColor: '#c4bcab', maxHeight: '400px' }}
+            style={{
+              backgroundColor: 'var(--primary-card-background)',
+              maxHeight: '400px',
+            }}
           >
             <Summary />
           </div>
