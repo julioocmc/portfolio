@@ -7,7 +7,7 @@ interface SectionTitleProps {
 const SectionTitle: FC<SectionTitleProps> = ({ title }) => (
   <h2
     className="text-4xl font-bold mb-8 text-center"
-    style={{ color: '#dd6236' }}
+    style={{ color: 'var(--primary-bullet)' }}
   >
     {title}
   </h2>

@@ -7,8 +7,7 @@ import {
   FaBootstrap,
   FaSass,
 } from 'react-icons/fa';
-import { SiTypescript } from 'react-icons/si';
-
+import { SiTypescript, SiTailwindcss, SiJest } from 'react-icons/si';
 interface Skill {
   name: string;
   icon: JSX.Element;
@@ -51,6 +50,18 @@ const skills: Skill[] = [
     icon: <FaBootstrap size={60} color="#7952B3" />,
     link: 'https://getbootstrap.com/',
   },
+
+  {
+    name: 'Tailwind',
+    icon: <SiTailwindcss size={60} color="#38BDF8" />,
+    link: 'https://tailwindcss.com/',
+  },
+
+  {
+    name: 'Jest',
+    icon: <SiJest size={60} color="#C21325" />,
+    link: 'https://jestjs.io/',
+  },
 ];
 
 const SkillsSection: FC = () => (
@@ -68,7 +79,9 @@ const SkillsSection: FC = () => (
           className="transform transition duration-500 hover:scale-105 cursor-pointer flex flex-col items-center"
         >
           {skill.icon}
-          <span className="mt-3 text-gray-700">{skill.name}</span>
+          <span className="mt-3" style={{ color: 'var(--secondary-black)' }}>
+            {skill.name}
+          </span>
         </a>
       ))}
     </div>

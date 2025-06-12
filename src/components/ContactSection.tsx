@@ -13,14 +13,15 @@ const ContactSection: FC = () => {
   return (
     <div
       className="mx-auto m-10  p-7 rounded-lg shadow-lg"
-      style={{ width: '400px', border: '2px solid #c4bcab' }}
+      style={{
+        width: '400px',
+        border: '2px solid #c4bcab',
+        color: 'var(--secondary-black)',
+      }}
     >
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label
-            htmlFor="name"
-            className="block text-lg font-medium text-gray-700"
-          >
+          <label htmlFor="name" className="block text-lg font-medium">
             Nombre
           </label>
           <input
@@ -33,10 +34,7 @@ const ContactSection: FC = () => {
           />
         </div>
         <div>
-          <label
-            htmlFor="email"
-            className="block text-lg font-medium text-gray-700"
-          >
+          <label htmlFor="email" className="block text-lg font-medium">
             Correo Electrónico
           </label>
           <input
@@ -49,10 +47,7 @@ const ContactSection: FC = () => {
           />
         </div>
         <div>
-          <label
-            htmlFor="message"
-            className="block text-lg font-medium text-gray-700"
-          >
+          <label htmlFor="message" className="block text-lg font-medium">
             Mensaje
           </label>
           <textarea
@@ -68,7 +63,8 @@ const ContactSection: FC = () => {
         <div className="text-center">
           <button
             type="submit"
-            className="w-full md:w-auto px-6 py-3 text-lg font-medium text-white bg-orange-500 rounded-lg shadow hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+            className="w-full md:w-auto px-6 py-3 text-lg font-medium text-white rounded-lg shadow hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+            style={{ backgroundColor: 'var(--primary-bullet)' }}
           >
             Enviar
           </button>

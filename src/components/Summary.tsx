@@ -1,13 +1,12 @@
 const Summary = () => {
   return (
     <section className="card text-left">
-      <p className="pl-5 text-gray-700">
-        Soy un desarrollador frontend radicado en Caracas, Venezuela motivado
-        por crear interfaces de usuario intuitivas y atractivas. Me encanta
-        aprender y estar al día con las últimas tecnologías y tendencias en el
-        desarrollo web. Mis habilidades abarcan JavaScript, TypeScript, HTML,
-        CSS y React, así como diversas herramientas y librerías que complementan
-        mi desarrollo frontend.
+      <p className="pl-5" style={{ color: 'var(--primary-black)' }}>
+        Frontend Developer especializado en React, TypeScript y arquitecturas
+        modulares. Experiencia real desarrollando plataformas internas,
+        dashboards y ecommerce en equipos remotos y multidisciplinarios. Foco en
+        buenas prácticas, APIs, visualización de datos y componentes
+        reutilizables. Formación en backend y electrónica.
       </p>
     </section>
   );

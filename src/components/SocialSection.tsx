@@ -11,7 +11,7 @@ const SocialLinksSection: FC = () => (
         href="https://www.linkedin.com/in/julio-mijares/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-700 hover:text-orange-500 transition-colors duration-300 ease-in-out"
+        className="text-gray-700 hover:[color:var(--primary-bullet)] transition-colors duration-300 ease-in-out"
       >
         <FaLinkedin size={40} />
       </a>
@@ -19,19 +19,19 @@ const SocialLinksSection: FC = () => (
         href="https://github.com/julioocmc"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-700 hover:text-orange-500 transition-colors duration-300 ease-in-out"
+        className="text-gray-700 hover:[color:var(--primary-bullet)] transition-colors duration-300 ease-in-out"
       >
         <FaGithub size={40} />
       </a>
       <a
         href="mailto:juliooocmc18@gmail.com"
-        className="text-gray-700 hover:text-orange-500 transition-colors duration-300 ease-in-out"
+        className="text-gray-700 hover:[color:var(--primary-bullet)] transition-colors duration-300 ease-in-out"
       >
         <FaEnvelope size={40} />
       </a>
       <a
         href="tel:+584241484800"
-        className="text-gray-700 hover:text-orange-500 transition-colors duration-300 ease-in-out"
+        className="text-gray-700 hover:[color:var(--primary-bullet)] transition-colors duration-300 ease-in-out"
       >
         <FaPhone size={40} />
       </a>
