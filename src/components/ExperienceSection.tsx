@@ -13,10 +13,58 @@ interface ExperienceProps {
 
 const experiences: ExperienceProps[] = [
   {
-    projectName: 'Redvital Platform',
+    projectName: 'Panel Administrativo',
+    title: 'Desarrollador Frontend',
+    company: 'Go-Ya Venezuela',
+    video: '/goya-video.mp4',
+    date: '03/2025 - 05/2025',
+    description: `
+      Mi primer gran proyecto en una de las principales empresas de Venezuela. 
+      Como desarrollador frontend, fui el único responsable del desarrollo inicial de toda la plataforma web interna, 
+      destinada exclusivamente a los empleados de la empresa, incluyendo gerentes, proveedores, liquidadores y administradores. 
+      Esta plataforma les permite monitorear y gestionar el rendimiento de sus productos dentro de la empresa. 
+      El proyecto, desarrollado con tecnologías como Metronic, React, TypeScript, SASS, SweetAlert y Bootstrap, es altamente 
+      modular y complejo, adaptado a las necesidades específicas de cada usuario. 
+      Debido a un acuerdo de confidencialidad, no puedo compartir el enlace ni hacer público su acceso.
+    `,
+  },
+  {
+    projectName: 'Panel para Proveedores',
     title: 'Desarrollador Frontend',
     company: 'Makro Redvital',
     video: '/redvital-videoc.mp4',
+    date: '11/2023 - Presente',
+    description: `
+      Mi primer gran proyecto en una de las principales empresas de Venezuela. 
+      Como desarrollador frontend, fui el único responsable del desarrollo inicial de toda la plataforma web interna, 
+      destinada exclusivamente a los empleados de la empresa, incluyendo gerentes, proveedores, liquidadores y administradores. 
+      Esta plataforma les permite monitorear y gestionar el rendimiento de sus productos dentro de la empresa. 
+      El proyecto, desarrollado con tecnologías como Metronic, React, TypeScript, SASS, SweetAlert y Bootstrap, es altamente 
+      modular y complejo, adaptado a las necesidades específicas de cada usuario. 
+      Debido a un acuerdo de confidencialidad, no puedo compartir el enlace ni hacer público su acceso.
+    `,
+  },
+  {
+    projectName: 'Gestor de Pedidos',
+    title: 'Desarrollador Frontend',
+    company: 'Makro Redvital',
+    video: '/pedidos-video.mp4',
+    date: '11/2023 - Presente',
+    description: `
+      Mi primer gran proyecto en una de las principales empresas de Venezuela. 
+      Como desarrollador frontend, fui el único responsable del desarrollo inicial de toda la plataforma web interna, 
+      destinada exclusivamente a los empleados de la empresa, incluyendo gerentes, proveedores, liquidadores y administradores. 
+      Esta plataforma les permite monitorear y gestionar el rendimiento de sus productos dentro de la empresa. 
+      El proyecto, desarrollado con tecnologías como Metronic, React, TypeScript, SASS, SweetAlert y Bootstrap, es altamente 
+      modular y complejo, adaptado a las necesidades específicas de cada usuario. 
+      Debido a un acuerdo de confidencialidad, no puedo compartir el enlace ni hacer público su acceso.
+    `,
+  },
+  {
+    projectName: 'Tienda Virtual',
+    title: 'Desarrollador Frontend',
+    company: 'Makro Redvital',
+    video: '/tienda-video.mp4',
     date: '11/2023 - Presente',
     description: `
       Mi primer gran proyecto en una de las principales empresas de Venezuela. 
